@@ -11,7 +11,7 @@ def gen_dataset_file(image_class_info_file_path, image_file_path, origin_file, d
 
     df['class'].fillna(0, inplace=True)
     df['class'].replace('-1', 0, inplace=True)
-    df['file_name'] = df['file_name'].map(lambda x : os.path.join(image_file_path, x))
+    df['file_name'] = df['file_name'].map(lambda x : os.path.join(image_file_path, x + '.jpg'))
     df.to_csv(dataset_file_name, sep=' ', header=False, index=False)
 
 
