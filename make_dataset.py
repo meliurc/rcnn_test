@@ -18,7 +18,7 @@ def gen_dataset_file(image_class_info_file_path, image_file_path, origin_file, d
 if __name__ == '__main__':
     object_class = "dog"
     train_file = object_class + "_train.txt"
-    test_file = object_class + "_test.txt"
+    test_file = object_class + "_val.txt"
     trainval_file = object_class + "_trainval.txt"
 
     gen_dataset_file(image_class_info_file_path, image_file_path, train_file, train_file)
